@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Weather App</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
+</head>
+
+
+<body>
+<div class="sun-bg"></div>
+
+<div class="stars-bg">
+    <div class="star" style="top:8vh; left:12vw;"><svg viewBox="0 0 24 24"><polygon fill="#fffde7" points="12,2 15,10 23,10 17,15 19,23 12,18 5,23 7,15 1,10 9,10"/></svg></div>
+    <div class="star" style="top:15vh; left:22vw;"><svg viewBox="0 0 24 24"><polygon fill="#fffde7" points="12,2 15,10 23,10 17,15 19,23 12,18 5,23 7,15 1,10 9,10"/></svg></div>
+    <div class="star" style="top:10vh; left:70vw;"><svg viewBox="0 0 24 24"><polygon fill="#fffde7" points="12,2 15,10 23,10 17,15 19,23 12,18 5,23 7,15 1,10 9,10"/></svg></div>
+    <div class="star" style="top:20vh; left:80vw;"><svg viewBox="0 0 24 24"><polygon fill="#fffde7" points="12,2 15,10 23,10 17,15 19,23 12,18 5,23 7,15 1,10 9,10"/></svg></div>
+    <div class="star" style="top:25vh; left:10vw;"><svg viewBox="0 0 24 24"><polygon fill="#fffde7" points="12,2 15,10 23,10 17,15 19,23 12,18 5,23 7,15 1,10 9,10"/></svg></div>
+    <div class="star" style="top:30vh; left:35vw;"><svg viewBox="0 0 24 24"><polygon fill="#fffde7" points="12,2 15,10 23,10 17,15 19,23 12,18 5,23 7,15 1,10 9,10"/></svg></div>
+    <div class="star" style="top:32vh; left:60vw;"><svg viewBox="0 0 24 24"><polygon fill="#fffde7" points="12,2 15,10 23,10 17,15 19,23 12,18 5,23 7,15 1,10 9,10"/></svg></div>
+    <div class="star" style="top:40vh; left:75vw;"><svg viewBox="0 0 24 24"><polygon fill="#fffde7" points="12,2 15,10 23,10 17,15 19,23 12,18 5,23 7,15 1,10 9,10"/></svg></div>
+    <div class="star" style="top:45vh; left:20vw;"><svg viewBox="0 0 24 24"><polygon fill="#fffde7" points="12,2 15,10 23,10 17,15 19,23 12,18 5,23 7,15 1,10 9,10"/></svg></div>
+    <div class="star" style="top:50vh; left:50vw;"><svg viewBox="0 0 24 24"><polygon fill="#fffde7" points="12,2 15,10 23,10 17,15 19,23 12,18 5,23 7,15 1,10 9,10"/></svg></div>
+    <div class="star" style="top:55vh; left:65vw;"><svg viewBox="0 0 24 24"><polygon fill="#fffde7" points="12,2 15,10 23,10 17,15 19,23 12,18 5,23 7,15 1,10 9,10"/></svg></div>
+    <div class="star" style="top:60vh; left:30vw;"><svg viewBox="0 0 24 24"><polygon fill="#fffde7" points="12,2 15,10 23,10 17,15 19,23 12,18 5,23 7,15 1,10 9,10"/></svg></div>
+    <div class="star" style="top:65vh; left:80vw;"><svg viewBox="0 0 24 24"><polygon fill="#fffde7" points="12,2 15,10 23,10 17,15 19,23 12,18 5,23 7,15 1,10 9,10"/></svg></div>
+    <div class="star" style="top:70vh; left:10vw;"><svg viewBox="0 0 24 24"><polygon fill="#fffde7" points="12,2 15,10 23,10 17,15 19,23 12,18 5,23 7,15 1,10 9,10"/></svg></div>
+    <div class="star" style="top:75vh; left:25vw;"><svg viewBox="0 0 24 24"><polygon fill="#fffde7" points="12,2 15,10 23,10 17,15 19,23 12,18 5,23 7,15 1,10 9,10"/></svg></div>
+    <div class="star" style="top:80vh; left:40vw;"><svg viewBox="0 0 24 24"><polygon fill="#fffde7" points="12,2 15,10 23,10 17,15 19,23 12,18 5,23 7,15 1,10 9,10"/></svg></div>
+    <div class="star" style="top:85vh; left:60vw;"><svg viewBox="0 0 24 24"><polygon fill="#fffde7" points="12,2 15,10 23,10 17,15 19,23 12,18 5,23 7,15 1,10 9,10"/></svg></div>
+    <div class="star" style="top:90vh; left:70vw;"><svg viewBox="0 0 24 24"><polygon fill="#fffde7" points="12,2 15,10 23,10 17,15 19,23 12,18 5,23 7,15 1,10 9,10"/></svg></div>
+    <div class="star" style="top:92vh; left:15vw;"><svg viewBox="0 0 24 24"><polygon fill="#fffde7" points="12,2 15,10 23,10 17,15 19,23 12,18 5,23 7,15 1,10 9,10"/></svg></div>
+    <div class="star" style="top:95vh; left:50vw;"><svg viewBox="0 0 24 24"><polygon fill="#fffde7" points="12,2 15,10 23,10 17,15 19,23 12,18 5,23 7,15 1,10 9,10"/></svg></div>
+    <div class="star" style="top:5vh; left:50vw;"><svg viewBox="0 0 24 24"><polygon fill="#fffde7" points="12,2 15,10 23,10 17,15 19,23 12,18 5,23 7,15 1,10 9,10"/></svg></div>
+    <div class="star" style="top:12vh; left:60vw;"><svg viewBox="0 0 24 24"><polygon fill="#fffde7" points="12,2 15,10 23,10 17,15 19,23 12,18 5,23 7,15 1,10 9,10"/></svg></div>
+    <div class="star" style="top:18vh; left:40vw;"><svg viewBox="0 0 24 24"><polygon fill="#fffde7" points="12,2 15,10 23,10 17,15 19,23 12,18 5,23 7,15 1,10 9,10"/></svg></div>
+    <div class="star" style="top:28vh; left:55vw;"><svg viewBox="0 0 24 24"><polygon fill="#fffde7" points="12,2 15,10 23,10 17,15 19,23 12,18 5,23 7,15 1,10 9,10"/></svg></div>
+    <div class="star" style="top:38vh; left:65vw;"><svg viewBox="0 0 24 24"><polygon fill="#fffde7" points="12,2 15,10 23,10 17,15 19,23 12,18 5,23 7,15 1,10 9,10"/></svg></div>
+    <div class="star" style="top:48vh; left:80vw;"><svg viewBox="0 0 24 24"><polygon fill="#fffde7" points="12,2 15,10 23,10 17,15 19,23 12,18 5,23 7,15 1,10 9,10"/></svg></div>
+    <div class="star" style="top:58vh; left:10vw;"><svg viewBox="0 0 24 24"><polygon fill="#fffde7" points="12,2 15,10 23,10 17,15 19,23 12,18 5,23 7,15 1,10 9,10"/></svg></div>
+    <div class="star" style="top:68vh; left:35vw;"><svg viewBox="0 0 24 24"><polygon fill="#fffde7" points="12,2 15,10 23,10 17,15 19,23 12,18 5,23 7,15 1,10 9,10"/></svg></div>
+    <div class="star" style="top:78vh; left:55vw;"><svg viewBox="0 0 24 24"><polygon fill="#fffde7" points="12,2 15,10 23,10 17,15 19,23 12,18 5,23 7,15 1,10 9,10"/></svg></div>
+    <div class="star" style="top:88vh; left:25vw;"><svg viewBox="0 0 24 24"><polygon fill="#fffde7" points="12,2 15,10 23,10 17,15 19,23 12,18 5,23 7,15 1,10 9,10"/></svg></div>
+</div>
+
+<!--Norisori-->
+<div class="clouds-bg">
+    <div class="cloud cloud1">
+        <div class="cloud-shape c1"></div>
+        <div class="cloud-shape c2"></div>
+        <div class="cloud-shape c3"></div>
+        <div class="cloud-shape c4"></div>
+    </div>
+    <div class="cloud cloud2">
+        <div class="cloud-shape c1"></div>
+        <div class="cloud-shape c2"></div>
+        <div class="cloud-shape c3"></div>
+        <div class="cloud-shape c4"></div>
+    </div>
+    <div class="cloud cloud3">
+        <div class="cloud-shape c1"></div>
+        <div class="cloud-shape c2"></div>
+        <div class="cloud-shape c3"></div>
+        <div class="cloud-shape c4"></div>
+    </div>
+    <div class="cloud cloud4">
+        <div class="cloud-shape c1"></div>
+        <div class="cloud-shape c2"></div>
+        <div class="cloud-shape c3"></div>
+        <div class="cloud-shape c4"></div>
+    </div>
+</div>
+
+<div class="container">
+    <h1>Weather App</h1>
+
+    <!-- Form de căutare -->
+    <form th:action="@{/search}" method="post" class="search-form">
+        <input type="text" name="location" placeholder="Enter city, country" required />
+        <button type="submit">Search</button>
+    </form>
+
+    <!-- Card meteo curent -->
+    <div class="weather-card" th:if="${weather != null}">
+        <h2 th:text="${weather.location}">Location</h2>
+        <img th:src="'http://openweathermap.org/img/wn/' + ${weather.icon} + '@2x.png'" alt="icon"/>
+        <p class="temp"><span th:text="${weather.temperature}">0.0</span> °C</p>
+        <p class="desc" th:text="${weather.description}">Condition</p>
+        <p>Humidity: <span th:text="${weather.humidity}">0</span>%</p>
+        <p>Wind: <span th:text="${weather.windSpeed}">0.0</span> m/s</p>
+    </div>
+
+    <!-- Prognoza pe ore -->
+    <div class="hourly-forecast" th:if="${weather.hourlyForecast != null}">
+        <h3>Hourly Forecast</h3>
+        <div class="hour-card" th:each="hour : ${weather.hourlyForecast}">
+            <p th:text="${hour.time}">Time</p>
+            <img th:src="'http://openweathermap.org/img/wn/' + ${hour.icon} + '@2x.png'" alt="icon"/>
+            <p th:text="${hour.temp} + ' °C'">Temp</p>
+            <p th:text="${hour.description}">Desc</p>
+            <p th:text="'Rain: ' + ${hour.pop} + '%'">Rain</p>
+        </div>
+    </div>
+
+    <!-- Prognoza pe zile -->
+    <div class="daily-forecast" th:if="${weather.dailyForecast != null}">
+        <h3>Daily Forecast</h3>
+        <div class="day-card" th:each="day : ${weather.dailyForecast}">
+            <p th:text="${day.date}">Date</p>
+            <img th:src="'http://openweathermap.org/img/wn/' + ${day.icon} + '@2x.png'" alt="icon"/>
+            <p th:text="'Min: ' + ${day.tempMin} + ' °C'">Temp Min</p>
+            <p th:text="'Max: ' + ${day.tempMax} + ' °C'">Temp Max</p>
+            <p th:text="${day.description}">Desc</p>
+            <p th:text="'Rain: ' + ${day.pop} + '%'">Rain</p>
+        </div>
+    </div>
+</div>
+
+
+<!-- Script pentru tremurat norisori -->
+<script>
+    document.querySelectorAll('.cloud').forEach(function(cloud) {
+        cloud.addEventListener('click', function() {
+            cloud.classList.add('tremura');
+            setTimeout(function() {
+                cloud.classList.remove('tremura');
+            }, 400);
+        });
+    });
+</script>
+
+<script>
+    function setDayNightMode() {
+        const hour = new Date().getHours();
+        if (hour >= 20 || hour < 7) { // Noapte între 20:00 și 07:00
+            document.body.classList.add('night-mode');
+            document.body.classList.remove('day-mode');
+        } else {
+            document.body.classList.add('day-mode');
+            document.body.classList.remove('night-mode');
+        }
+    }
+    setDayNightMode();
+    setInterval(setDayNightMode, 10 * 60 * 1000); // verifică la fiecare 10 minute
+
+    // Efect de rotire la click pe stele
+    document.querySelectorAll('.star').forEach(function(star) {
+        star.addEventListener('click', function() {
+            star.classList.add('clicked');
+            setTimeout(function() {
+                star.classList.remove('clicked');
+            }, 700);
+        });
+    });
+</script>
+
+</body>
+
+</html>

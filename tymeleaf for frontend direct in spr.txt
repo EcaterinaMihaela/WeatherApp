@@ -1,0 +1,82 @@
+tymeleaf for frontend direct in springboot ca dependenta
+spring pt partea de backend
+restcontroller pt getmapping
+server local
+bootare de pe site ul meteo cu o cheie specifica returneaza pana acum in format json datele despre temperatura intr o tara data
+logere
+gestionarea erorilor
+2 servicii pana acum de gestionare a ip urilor(da ip ul clientului si afiseaza vremea local si pt o locatie data)
+al 2 lea serviciu da vremea in locatia de la ip printr un get de la OpenWeatherMap
+
+frontend cu tymeleaf:direct in spring integrat,cu dependenta pom,un controller care ia datele si le afiseaza intr un index.html
+
+
+
+OpenWeatherMap One Call API sau 5-day/3-hour forecast API.
+
+1️⃣ Tipuri de API OpenWeatherMap
+
+Current Weather Data – ce folosești acum, dă doar vremea curentă.
+
+5 Day / 3 Hour Forecast – dă prognoza pe 3 ore pentru următoarele 5 zile.
+
+URL:
+
+http://api.openweathermap.org/data/2.5/forecast?q={city}&appid={API_KEY}&units=metric
+
+
+Primești un JSON cu list – fiecare element are:
+
+dt_txt – data și ora
+
+main.temp – temperatura
+
+weather[0].description – condiție meteo
+
+pop – probability of precipitation (%)
+
+One Call API (mai avansat) – dă current, hourly, daily, alerts.
+
+URL:
+
+https://api.openweathermap.org/data/3.0/onecall?lat={lat}&lon={lon}&exclude=minutely,alerts&appid={API_KEY}&units=metric
+
+
+Primești:
+
+current – vreme curentă
+
+hourly – prognoza pe ore
+
+daily – prognoza pe zile
+
+Important: One Call API necesită latitude și longitude, deci mai întâi trebuie să faci un call pentru city -> coordonate.
+
+2️⃣ Cum să modifici WeatherService
+
+Creezi o nouă metodă care să apeleze 5-day/3-hour forecast sau One Call API.
+
+Extragerea datelor din JSON poate fi făcută folosind JSONObject sau Map.
+
+Exemplu simplificat pentru 5-day/3-hour forecast:
+
+
+
+
+
+
+
+
+
+
+
+
+🔹 Varianta 2: Frontend separat (React, Angular, Vue)
+
+La tine backend-ul expune /api/weather.
+
+Poți face un frontend React care face fetch("http://localhost:8080/api/weather") și afișează datele.
+
+Avantaj: modern și flexibil.
+
+Dezavantaj: un pic mai mult setup.
