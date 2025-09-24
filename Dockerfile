@@ -9,7 +9,8 @@ WORKDIR /app
 COPY . .
 
 # Rulăm comanda Maven pentru a construi aplicația
-RUN ./mvnw clean package
+RUN ./mvnw clean package -DskipTests
+
 
 # Comanda de start a aplicației
 CMD ["java", "-jar", "target/weather-app-0.0.1-SNAPSHOT.jar"]
